@@ -28,7 +28,7 @@ node {
 //       def app = docker.build("hallsa/docker-nodejs-demo:${commit_id}", '.').push()
 //     }                                   
 
-       docker.withRegistry('', 'dockerhub') {
+       docker.withRegistry('', 'dockerhubpassword') {
          def app = docker.build("hallsa/docker-nodejs-demo:${commit_id}", '.').push()
 	   }
    }                                       
